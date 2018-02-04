@@ -62,7 +62,7 @@ enum { MACRO_VERSION_INFO,
 
 
 /** The Model 01's key layouts are defined as 'keymaps'. By default, there are two
-  * keymaps: The standard QWERTY keymap and the "Function layer" keymap.
+  * keymaps: The standard COLEMAK keymap and the "Function layer" keymap.
   *
   * Each keymap is defined as a list using the 'KEYMAP_STACKED' macro, built
   * of first the left hand's layout, followed by the right hand's layout.
@@ -83,13 +83,10 @@ enum { MACRO_VERSION_INFO,
   *   the special nature of the PROG key
   *   keeping NUM and FN consistent and accessible on all layers
   *
-  *
   * The "keymaps" data structure is a list of the keymaps compiled into the firmware.
   * The order of keymaps in the list is important, as the ShiftToLayer(#) and LockLayer(#)
   * macros switch to key layers based on this list.
   *
-  *
-
   * A key defined as 'ShiftToLayer(FUNCTION)' will switch to FUNCTION while held.
   * Similarly, a key defined as 'LockLayer(NUMPAD)' will switch to NUMPAD when tapped.
   */
@@ -97,12 +94,11 @@ enum { MACRO_VERSION_INFO,
 /**
   * Layers are "0-indexed" -- That is the first one is layer 0. The second one is layer 1.
   * The third one is layer 2.
-  * This 'enum' lets us use names like QWERTY, FUNCTION, and NUMPAD in place of
+  * This 'enum' lets us use names like COLEMAK, FUNCTION, and NUMPAD in place of
   * the numbers 0, 1 and 2.
-  *
   */
 
-enum { QWERTY, NUMPAD, FUNCTION }; // layers
+enum { COLEMAK, NUMPAD, FUNCTION }; // layers
 
 /* This comment temporarily turns off astyle's indent enforcement
  *   so we can make the keymaps actually resemble the physical key layout better
@@ -111,18 +107,18 @@ enum { QWERTY, NUMPAD, FUNCTION }; // layers
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
-  [QWERTY] = KEYMAP_STACKED
+  [COLEMAK] = KEYMAP_STACKED
   (___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
-   Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,
-   Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,
+   Key_Backtick, Key_Q, Key_W, Key_F, Key_P, Key_G, Key_Tab,
+   Key_PageUp,   Key_A, Key_R, Key_S, Key_T, Key_D,
    Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,
    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
    M(MACRO_ANY),  Key_6, Key_7, Key_8,     Key_9,         Key_0,         LockLayer(NUMPAD),
-   Key_Enter,     Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
-                  Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
-   Key_RightAlt,  Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
+   Key_Enter,     Key_J, Key_L, Key_U,     Key_Y,         Key_Semicolon, Key_Equals,
+                  Key_H, Key_N, Key_E,     Key_I,         Key_O,         Key_Quote,
+   Key_RightAlt,  Key_K, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
    Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,
    ShiftToLayer(FUNCTION)),
 
