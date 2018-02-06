@@ -19,6 +19,7 @@
 #include "Kaleidoscope-LEDEffect-BootGreeting.h"
 #include "Kaleidoscope-LEDEffect-Rainbow.h"
 #include "Kaleidoscope-LED-Stalker.h"
+#include "Kaleidoscope-DualUse.h"
 
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
@@ -74,7 +75,7 @@ enum { MACRO_VERSION_INFO
   * the numbers 0, 1 and 2.
   */
 
-enum { COLEMAK, PROGRAMMING, FUNCTION }; // layers
+enum { COLEMAK, LAZYNUMBERS, PROGRAMMING, FUNCTION }; // layers
 
 /* This comment temporarily turns off astyle's indent enforcement
  *   so we can make the keymaps actually resemble the physical key layout better
@@ -95,8 +96,24 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Enter,         Key_J, Key_L, Key_U,     Key_Y,        Key_Semicolon, Key_Equals,
                       Key_H, Key_N, Key_E,     Key_I,        Key_O,         Key_Quote,
    Key_PcApplication, Key_K, Key_M, Key_Comma, Key_Period,   Key_Slash,     Key_Mute,
-   Key_RightAlt, ShiftToLayer(PROGRAMMING), Key_Spacebar, Key_RightShift,
+   MT(RightAlt, Escape), ShiftToLayer(PROGRAMMING), Key_Spacebar, ShiftToLayer(LAZYNUMBERS),
    ShiftToLayer(FUNCTION)),
+
+
+  [LAZYNUMBERS] = KEYMAP_STACKED
+  (___, ___,           ___,           ___,                ___,           ___,             XXX,
+   ___, LSHIFT(Key_1), LSHIFT(Key_2), LSHIFT(Key_3),      LSHIFT(Key_4), LSHIFT(Key_5),   Key_Tab,
+   ___, Key_1,         Key_2,         Key_3,              Key_4,         Key_5,
+   ___, XXX,           XXX,           XXX,                XXX,           XXX,             XXX,
+   ___, ___, ___, ___,
+   ___,
+
+   ___, ___,                  ___,           ___,               ___,                ___,        XXX,
+   ___, LSHIFT(Key_6),        LSHIFT(Key_7), LSHIFT(Key_8),     LSHIFT(Key_Equals), Key_Equals, LSHIFT(Key_Backslash),
+        Key_6,                Key_7,         Key_8,             Key_9,              Key_0,      Key_Backtick,
+   ___, LSHIFT(Key_Backtick), Key_Minus,     LSHIFT(Key_Minus), XXX,                XXX,        ___,
+   ___, ___, ___, ___,
+   ___),
 
 
   [PROGRAMMING] =  KEYMAP_STACKED
@@ -204,7 +221,7 @@ void setup() {
     // and slowly moves the rainbow across your keyboard
     &LEDRainbowWaveEffect,
 
-    
+    &DualUse,
 
     // The macros plugin adds support for macros
     &Macros
