@@ -4,4 +4,4 @@ A fork of the original [example Keyboardio firmware](https://github.com/keyboard
 
 # What do I do with it?
 
-Whatever you want that's permissible bythe GPLv3.
+Whatever you want that's permissible by the GPLv3.
