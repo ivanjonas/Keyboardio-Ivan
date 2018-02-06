@@ -12,31 +12,13 @@
  * as well as the Kaleidoscope plugins we use in the Model 01's firmware
  */
 
-
-// The Kaleidoscope core
 #include "Kaleidoscope.h"
-
-// Support for macros
 #include "Kaleidoscope-Macros.h"
-
-// Support for controlling the keyboard's LEDs
 #include "Kaleidoscope-LEDControl.h"
-
-// Support for an "LED off mode"
 #include "LED-Off.h"
-
-// Support for the "Boot greeting" effect, which pulses the 'LED' button for 10s
-// when the keyboard is connected to a computer (or that computer is powered on)
 #include "Kaleidoscope-LEDEffect-BootGreeting.h"
-
-// Support for LED modes that pulse the keyboard's LED in a rainbow pattern
 #include "Kaleidoscope-LEDEffect-Rainbow.h"
-
-// Support for an LED mode that lights up the keys as you press them
 #include "Kaleidoscope-LED-Stalker.h"
-
-// Support for Keyboardio's internal keyboard testing mode
-#include "Kaleidoscope-Model01-TestMode.h"
 
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
@@ -55,7 +37,6 @@
 enum { MACRO_VERSION_INFO
 //   , MACRO_NAME
      };
-
 
 
 /** The Model 01's key layouts are defined as 'keymaps'. By default, there are two
@@ -86,9 +67,7 @@ enum { MACRO_VERSION_INFO
   *
   * A key defined as 'ShiftToLayer(FUNCTION)' will switch to FUNCTION while held.
   * Similarly, a key defined as 'LockLayer(NUMPAD)' will switch to NUMPAD when tapped.
-  */
-
-/**
+  *
   * Layers are "0-indexed" -- That is the first one is layer 0. The second one is layer 1.
   * The third one is layer 2.
   * This 'enum' lets us use names like COLEMAK, FUNCTION, and NUMPAD in place of
@@ -207,9 +186,6 @@ void setup() {
   Kaleidoscope.use(
     // The boot greeting effect pulses the LED button for 10 seconds after the keyboard is first connected
     &BootGreetingEffect,
-
-    // The hardware test mode, which can be invoked by tapping Prog, LED and the left Fn button at the same time.
-    &TestMode,
 
     // LEDControl provides support for other LED modes
     &LEDControl,
