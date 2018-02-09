@@ -20,6 +20,7 @@
 #include "Kaleidoscope-LEDEffect-Rainbow.h"
 #include "Kaleidoscope-LED-Stalker.h"
 #include "Kaleidoscope-DualUse.h"
+#include "src/LangPack-German/LangPack-German.h"
 
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
@@ -82,6 +83,7 @@ enum { COLEMAK, LAZYNUMBERS, PROGRAMMING, FUNCTION }; // layers
  */
 // *INDENT-OFF*
 
+#define R(n) (Key){.raw = kaleidoscope::language::n}
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [COLEMAK] = KEYMAP_STACKED
@@ -222,6 +224,8 @@ void setup() {
     &LEDRainbowWaveEffect,
 
     &DualUse,
+
+    &German,
 
     // The macros plugin adds support for macros
     &Macros
