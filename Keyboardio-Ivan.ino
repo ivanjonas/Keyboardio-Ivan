@@ -73,77 +73,76 @@ enum { MACRO_VERSION_INFO
   * This 'enum' lets us use names like COLEMAK, FUNCTION, and NUMPAD in place of
   * the numbers 0, 1 and 2.
   */
-
 enum { COLEMAK, LAZYNUMBERS, PROGRAMMING, FUNCTION }; // layers
 
-/* This comment temporarily turns off astyle's indent enforcement
- *   so we can make the keymaps actually resemble the physical key layout better
- */
+/** This comment temporarily turns off astyle's indent enforcement
+  *   so we can make the keymaps actually resemble the physical key layout better
+  */
 // *INDENT-OFF*
 
 #define R(n) (Key){.raw = kaleidoscope::language::n}
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [COLEMAK] = KEYMAP_STACKED
-  (Key_Escape,    Key_1, Key_2,  Key_3, Key_4, Key_5,   Key_LEDEffectNext,
+  (XXX,           Key_1, Key_2,  Key_3, Key_4, Key_5,   Key_LEDEffectNext,
    Key_Backtick,  Key_Q, Key_W,  Key_F, Key_P, Key_G,   Key_Tab,
    Key_PageUp,    Key_A, Key_R,  Key_S, Key_T, Key_D,
-   Key_PageDown,  Key_Z, Key_X,  Key_C, Key_V, Key_B,   Key_Delete,
+   Key_PageDown,  Key_Z, Key_X,  Key_C, Key_V, Key_B,   XXX,
    Key_Backspace, Key_LeftShift, Key_LeftAlt,  Key_LeftGui,
    Key_LeftControl,
 
-   Key_PrintScreen,   Key_6, Key_7, Key_8,     Key_9,        Key_0,         Key_Mute,
+   Key_PrintScreen,   Key_6, Key_7, Key_8,     Key_9,        Key_0,         Consumer_Mute,
    Key_Enter,         Key_J, Key_L, Key_U,     Key_Y,        Key_Semicolon, Key_Equals,
                       Key_H, Key_N, Key_E,     Key_I,        Key_O,         Key_Quote,
-   Key_PcApplication, Key_K, Key_M, Key_Comma, Key_Period,   Key_Slash,     Key_Mute,
-   MT(RightAlt, Escape), ShiftToLayer(PROGRAMMING), Key_Spacebar, ShiftToLayer(LAZYNUMBERS),
+   Key_PcApplication, Key_K, Key_M, Key_Comma, Key_Period,   Key_Slash,     XXX,
+   MT(RightAlt, Escape), ShiftToLayer(LAZYNUMBERS), Key_Spacebar, ShiftToLayer(PROGRAMMING),
    ShiftToLayer(FUNCTION)),
 
 
   [LAZYNUMBERS] = KEYMAP_STACKED
-  (___, ___,           ___,           ___,                ___,           ___,             XXX,
-   ___, LSHIFT(Key_1), LSHIFT(Key_2), LSHIFT(Key_3),      LSHIFT(Key_4), LSHIFT(Key_5),   Key_Tab,
-   ___, Key_1,         Key_2,         Key_3,              Key_4,         Key_5,
-   ___, XXX,           XXX,           XXX,                XXX,           XXX,             XXX,
+  (___, ___,           ___,           ___,           ___,           ___,             XXX,
+   ___, LSHIFT(Key_1), LSHIFT(Key_2), LSHIFT(Key_3), LSHIFT(Key_4), LSHIFT(Key_5),   ___,
+   ___, Key_1,         Key_2,         Key_3,         Key_4,         Key_5,
+   ___, XXX,           XXX,           XXX,           XXX,           XXX,             ___,
    ___, ___, ___, ___,
    ___,
 
-   ___, ___,                  ___,           ___,               ___,                ___,        XXX,
-   ___, LSHIFT(Key_6),        LSHIFT(Key_7), LSHIFT(Key_8),     LSHIFT(Key_Equals), Key_Equals, LSHIFT(Key_Backslash),
-        Key_6,                Key_7,         Key_8,             Key_9,              Key_0,      Key_Backtick,
-   ___, LSHIFT(Key_Backtick), Key_Minus,     LSHIFT(Key_Minus), XXX,                XXX,        ___,
+   ___, ___,           ___,           ___,           ___,                ___,        XXX,
+   ___, LSHIFT(Key_6), LSHIFT(Key_7), LSHIFT(Key_8), LSHIFT(Key_Equals), Key_Equals, XXX,
+        Key_6,         Key_7,         Key_8,         Key_9,              Key_0,      XXX,
+   ___, XXX,           XXX,           XXX,           XXX,                XXX,        XXX,
    ___, ___, ___, ___,
    ___),
 
 
   [PROGRAMMING] =  KEYMAP_STACKED
-  (XXX, Key_F1,            Key_F2,          Key_F3,             Key_F4,               Key_F5,   XXX,
-   XXX, XXX,               XXX,             LSHIFT(Key_Equals), Key_Equals,           XXX,      XXX,
-   XXX, LSHIFT(Key_Comma), Key_LeftBracket, Key_LeftParen,      Key_LeftCurlyBracket, Key_Backslash,
-   XXX, XXX,               XXX,             XXX,                XXX,                  XXX,      XXX,
+  (XXX, Key_F1,            Key_F2,          Key_F3,        Key_F4,               Key_F5,   XXX,
+   XXX, XXX,               XXX,             XXX,           XXX,                  XXX,      XXX,
+   XXX, LSHIFT(Key_Comma), Key_LeftBracket, Key_LeftParen, Key_LeftCurlyBracket, Key_Slash,
+   XXX, XXX,               XXX,             XXX,           XXX,                  XXX,      XXX,
    XXX, ___, ___, ___,
    ___,
 
-   XXX,            Key_F6,    Key_F7,                Key_F8,         Key_F9,            Key_F10,               Key_F11,
-   Key_ScrollLock, XXX,       XXX,                   Key_Minus,      LSHIFT(Key_Minus), LSHIFT(Key_Backslash), XXX,
-                   Key_Slash, Key_RightCurlyBracket, Key_RightParen, Key_RightBracket,  LSHIFT(Key_Period),    XXX,
-   Key_Pause,      XXX,       XXX,                   XXX,            XXX,               Key_Backslash,         XXX,
-   ___, ___, Key_Enter, ___,
+   XXX,            Key_F6,        Key_F7,                Key_F8,         Key_F9,            Key_F10,               Key_F11,
+   Key_ScrollLock, XXX,           XXX,                   Key_Minus,      LSHIFT(Key_Minus), LSHIFT(Key_Backslash), XXX,
+                   Key_Backslash, Key_RightCurlyBracket, Key_RightParen, Key_RightBracket,  LSHIFT(Key_Period),    XXX,
+   Key_Pause,      XXX,           XXX,                   XXX,            XXX,               XXX,                   XXX,
+   ___, ___, ___, ___,
    ___),
 
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,      Key_F1,          Key_F2,     Key_F3, Key_F4, Key_F5,   Key_LEDEffectNext,
-   Key_Tab,  ___,             ___,        ___,    ___,    ___,      ___,
-   Key_Home, ___,             ___,        ___,    ___,    ___,
-   Key_End,  Key_PrintScreen, Key_Insert, ___,    ___,    ___,      ___,
+  (___,      Key_F1,    Key_F2,    Key_F3,      Key_F4,    Key_F5,   Key_Insert,
+   Key_Tab,  Consumer_VolumeDecrement, Consumer_VolumeIncrement, Consumer_ScanPreviousTrack, Consumer_ScanNextTrack, Consumer_PlaySlashPause,      ___,
+   Key_Home, R(DEU_AU), R(DEU_OU), R(DEU_SSCH), R(DEU_UU), XXX,
+   Key_End,  XXX,       XXX,       XXX,         XXX,       XXX,      ___,
    Key_Delete, ___, ___, ___,
    ___,
 
-   XXX,               Key_F6, Key_F7,        Key_F8,        Key_F9,         Key_F10, Key_F11,
-   XXX,               XXX,    Key_Home,      Key_UpArrow,   Key_End,        XXX,     Key_F12,
-                      XXX,    Key_LeftArrow, Key_DownArrow, Key_RightArrow, XXX,     XXX,
-   Key_PcApplication, XXX,    XXX,           XXX,           XXX,            XXX,     Key_Mute,
+   LALT(Key_PrintScreen), Key_F6,       Key_F7,        Key_F8,        Key_F9,         Key_F10, Key_F11,
+   Key_ScrollLock,        Key_PageUp,   Key_Home,      Key_UpArrow,   Key_End,        XXX,     Key_F12,
+                          Key_PageDown, Key_LeftArrow, Key_DownArrow, Key_RightArrow, XXX,     XXX,
+   Key_Pause,             XXX,          XXX,           XXX,           XXX,            XXX,     Key_Mute,
    ___, ___, Key_Enter, ___,
    ___)
 };
