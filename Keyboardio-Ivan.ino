@@ -8,10 +8,9 @@
 
 
 /**
- * These #include directives pull in the Kaleidoscope firmware core,
- * as well as the Kaleidoscope plugins we use in the Model 01's firmware
- */
-
+  * These #include directives pull in the Kaleidoscope firmware core,
+  * as well as the Kaleidoscope plugins we use in the Model 01's firmware
+  */
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-LEDControl.h"
@@ -35,7 +34,6 @@
   * That switch statement actually runs the code associated with a macro when
   * a macro key is pressed.
   */
-
 enum { MACRO_VERSION_INFO
 //   , MACRO_NAME
      };
@@ -153,11 +151,11 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 /* Re-enable astyle's indent enforcement */
 // *INDENT-ON*
 
-/** versionInfoMacro handles the 'firmware version info' macro
- *  When a key bound to the macro is pressed, this macro
- *  prints out the firmware build information as virtual keystrokes
- */
 
+/** versionInfoMacro handles the 'firmware version info' macro
+  *  When a key bound to the macro is pressed, this macro
+  *  prints out the firmware build information as virtual keystrokes
+  */
 static void versionInfoMacro(uint8_t keyState) {
   if (keyToggledOn(keyState)) {
     Macros.type(PSTR("Keyboardio Model 01 - Kaleidoscope "));
@@ -167,17 +165,15 @@ static void versionInfoMacro(uint8_t keyState) {
 
 
 /** macroAction dispatches keymap events that are tied to a macro
-    to that macro. It takes two uint8_t parameters.
-
-    The first is the macro being called (the entry in the 'enum' earlier in this file).
-    The second is the state of the keyswitch. You can use the keyswitch state to figure out
-    if the key has just been toggled on, is currently pressed or if it's just been released.
-
-    The 'switch' statement should have a 'case' for each entry of the macro enum.
-    Each 'case' statement should call out to a function to handle the macro in question.
-
- */
-
+  * to that macro. It takes two uint8_t parameters.
+  *
+  * The first is the macro being called (the entry in the 'enum' earlier in this file).
+  * The second is the state of the keyswitch. You can use the keyswitch state to figure out
+  * if the key has just been toggled on, is currently pressed or if it's just been released.
+  *
+  * The 'switch' statement should have a 'case' for each entry of the macro enum.
+  * Each 'case' statement should call out to a function to handle the macro in question.
+  */
 const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   switch (macroIndex) {
 
@@ -189,12 +185,10 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 }
 
 
-
 /** The 'setup' function is one of the two standard Arduino sketch functions.
   * It's called when your keyboard first powers up. This is where you set up
   * Kaleidoscope and any plugins.
   */
-
 void setup() {
   // First, call Kaleidoscope's internal setup function
   Kaleidoscope.setup();
@@ -247,13 +241,13 @@ void setup() {
   LEDOff.activate();
 }
 
+
 /** loop is the second of the standard Arduino sketch functions.
   * As you might expect, it runs in a loop, never exiting.
   *
   * For Kaleidoscope-based keyboard firmware, you usually just want to
   * call Kaleidoscope.loop(); and not do anything custom here.
   */
-
 void loop() {
   Kaleidoscope.loop();
 }
