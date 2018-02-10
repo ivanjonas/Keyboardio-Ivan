@@ -100,17 +100,17 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
 
   [LAZYNUMBERS] = KEYMAP_STACKED
-  (___, ___,           ___,           ___,           ___,           ___,             XXX,
-   ___, LSHIFT(Key_1), LSHIFT(Key_2), LSHIFT(Key_3), LSHIFT(Key_4), LSHIFT(Key_5),   ___,
+  (XXX, XXX,           XXX,           XXX,           XXX,           XXX,             XXX,
+   XXX, LSHIFT(Key_1), LSHIFT(Key_2), LSHIFT(Key_3), LSHIFT(Key_4), LSHIFT(Key_5),   ___,
    ___, Key_1,         Key_2,         Key_3,         Key_4,         Key_5,
-   ___, XXX,           XXX,           XXX,           XXX,           XXX,             ___,
+   ___, XXX,           XXX,           XXX,           XXX,           XXX,             XXX,
    ___, ___, ___, ___,
    ___,
 
-   ___, ___,           ___,           ___,           ___,                ___,        XXX,
+   XXX, XXX,           XXX,           XXX,           XXX,                XXX,        XXX,
    ___, LSHIFT(Key_6), LSHIFT(Key_7), LSHIFT(Key_8), LSHIFT(Key_Equals), Key_Equals, XXX,
         Key_6,         Key_7,         Key_8,         Key_9,              Key_0,      XXX,
-   ___, XXX,           XXX,           XXX,           XXX,                XXX,        XXX,
+   XXX, XXX,           XXX,           XXX,           XXX,                XXX,        XXX,
    ___, ___, ___, ___,
    ___),
 
@@ -124,8 +124,8 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,
 
    XXX,            Key_F6,        Key_F7,                Key_F8,         Key_F9,            Key_F10,               Key_F11,
-   Key_ScrollLock, XXX,           XXX,                   Key_Minus,      LSHIFT(Key_Minus), LSHIFT(Key_Backslash), XXX,
-                   Key_Backslash, Key_RightCurlyBracket, Key_RightParen, Key_RightBracket,  LSHIFT(Key_Period),    XXX,
+   Key_ScrollLock, XXX,           XXX,                   Key_Minus,      LSHIFT(Key_Minus), LSHIFT(Key_Backslash), ___,
+                   Key_Backslash, Key_RightCurlyBracket, Key_RightParen, Key_RightBracket,  LSHIFT(Key_Period),    ___,
    Key_Pause,      XXX,           XXX,                   XXX,            XXX,               XXX,                   XXX,
    ___, ___, ___, ___,
    ___),
@@ -135,7 +135,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   (___,      Key_F1,    Key_F2,    Key_F3,      Key_F4,    Key_F5,   Key_Insert,
    Key_Tab,  Consumer_VolumeDecrement, Consumer_VolumeIncrement, Consumer_ScanPreviousTrack, Consumer_ScanNextTrack, Consumer_PlaySlashPause,      ___,
    Key_Home, R(DEU_AU), R(DEU_OU), R(DEU_SSCH), R(DEU_UU), XXX,
-   Key_End,  XXX,       XXX,       XXX,         XXX,       XXX,      ___,
+   Key_End,  XXX,       XXX,       XXX,         XXX,       XXX,      XXX,
    Key_Delete, ___, ___, ___,
    ___,
 
