@@ -76,11 +76,32 @@ enum { MACRO_VERSION_INFO
 enum { COLEMAK, LAZYNUMBERS, PROGRAMMING, FUNCTION }; // layers
 
 /** This comment temporarily turns off astyle's indent enforcement
-  *   so we can make the keymaps actually resemble the physical key layout better
+  * so we can make the keymaps actually resemble the physical key layout better
   */
 // *INDENT-OFF*
 
+/** Convenience definitions.
+ */
 #define R(n) (Key){.raw = kaleidoscope::language::n}
+
+#define ANGLE_L LSHIFT(Key_Comma)
+#define ANGLE_R LSHIFT(Key_Period)
+#define BRACKET_L Key_LeftBracket
+#define BRACKET_R Key_RightParen
+#define PAREN_L Key_LeftParen
+#define PAREN_R Key_RightParen
+#define CURLY_L Key_LeftCurlyBracket
+#define CURLY_R Key_RightCurlyBracket
+#define PIPE LSHIFT(Key_Backslash)
+#define UNDERSCORE LSHIFT(Key_Minus)
+
+#define VOLUME_DOWN Consumer_VolumeDecrement
+#define VOLUME_UP   Consumer_VolumeIncrement
+#define TRACK_PREV  Consumer_ScanPreviousTrack
+#define TRACK_NEXT  Consumer_ScanNextTrack
+#define PLAY_PAUSE  Consumer_PlaySlashPause
+
+
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [COLEMAK] = KEYMAP_STACKED
@@ -91,10 +112,10 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Backspace, Key_LeftShift, Key_LeftAlt,  Key_LeftGui,
    Key_LeftControl,
 
-   Key_PrintScreen,   Key_6, Key_7, Key_8,     Key_9,        Key_0,         Consumer_Mute,
-   Key_Enter,         Key_J, Key_L, Key_U,     Key_Y,        Key_Semicolon, Key_Equals,
-                      Key_H, Key_N, Key_E,     Key_I,        Key_O,         Key_Quote,
-   Key_PcApplication, Key_K, Key_M, Key_Comma, Key_Period,   Key_Slash,     XXX,
+   Key_PrintScreen,   Key_6, Key_7, Key_8,     Key_9,      Key_0,         Consumer_Mute,
+   Key_Enter,         Key_J, Key_L, Key_U,     Key_Y,      Key_Semicolon, Key_Equals,
+                      Key_H, Key_N, Key_E,     Key_I,      Key_O,         Key_Quote,
+   Key_PcApplication, Key_K, Key_M, Key_Comma, Key_Period, Key_Slash,     XXX,
    MT(RightAlt, Escape), ShiftToLayer(LAZYNUMBERS), Key_Spacebar, ShiftToLayer(PROGRAMMING),
    ShiftToLayer(FUNCTION)),
 
@@ -116,26 +137,26 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
 
   [PROGRAMMING] =  KEYMAP_STACKED
-  (XXX, Key_F1,            Key_F2,          Key_F3,        Key_F4,               Key_F5,   XXX,
-   XXX, XXX,               XXX,             XXX,           XXX,                  XXX,      XXX,
-   XXX, LSHIFT(Key_Comma), Key_LeftBracket, Key_LeftParen, Key_LeftCurlyBracket, Key_Slash,
-   XXX, XXX,               XXX,             XXX,           XXX,                  XXX,      XXX,
+  (XXX, Key_F1,  Key_F2,    Key_F3,  Key_F4,  Key_F5,   XXX,
+   XXX, XXX,     XXX,       XXX,     XXX,     XXX,      XXX,
+   XXX, ANGLE_L, BRACKET_L, CURLY_L, PAREN_L, Key_Slash,
+   XXX, XXX,     XXX,       XXX,     XXX,     XXX,      XXX,
    XXX, ___, ___, ___,
    ___,
 
-   XXX,            Key_F6,        Key_F7,                Key_F8,         Key_F9,            Key_F10,               Key_F11,
-   Key_ScrollLock, XXX,           XXX,                   Key_Minus,      LSHIFT(Key_Minus), LSHIFT(Key_Backslash), ___,
-                   Key_Backslash, Key_RightCurlyBracket, Key_RightParen, Key_RightBracket,  LSHIFT(Key_Period),    ___,
-   Key_Pause,      XXX,           XXX,                   XXX,            XXX,               XXX,                   XXX,
+   XXX,            Key_F6,        Key_F7,  Key_F8,     Key_F9,    Key_F10, Key_F11,
+   Key_ScrollLock, XXX,           XXX,     UNDERSCORE, Key_Minus, PIPE,    ___,
+                   Key_Backslash, PAREN_R, CURLY_R,    BRACKET_R, ANGLE_R, ___,
+   Key_Pause,      XXX,           XXX,     XXX,        XXX,       XXX,     XXX,
    ___, ___, ___, ___,
    ___),
 
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,      Key_F1,    Key_F2,    Key_F3,      Key_F4,    Key_F5,   Key_Insert,
-   Key_Tab,  Consumer_VolumeDecrement, Consumer_VolumeIncrement, Consumer_ScanPreviousTrack, Consumer_ScanNextTrack, Consumer_PlaySlashPause,      ___,
-   Key_Home, R(DEU_AU), R(DEU_OU), R(DEU_SSCH), R(DEU_UU), XXX,
-   Key_End,  XXX,       XXX,       XXX,         XXX,       XXX,      XXX,
+  (___,      Key_F1,      Key_F2,    Key_F3,      Key_F4,     Key_F5,       Key_Insert,
+   Key_Tab,  VOLUME_DOWN, VOLUME_UP, TRACK_PREV,  TRACK_NEXT, PLAY_PAUSE,   ___,
+   Key_Home, R(DEU_AU),   R(DEU_OU), R(DEU_SSCH), R(DEU_UU),  XXX,
+   Key_End,  XXX,         XXX,       XXX,         XXX,        XXX,          XXX,
    Key_Delete, ___, ___, ___,
    ___,
 
