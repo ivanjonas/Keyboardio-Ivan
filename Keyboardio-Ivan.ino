@@ -87,7 +87,7 @@ enum { COLEMAK, LAZYNUMBERS, PROGRAMMING, FUNCTION }; // layers
 #define ANGLE_L LSHIFT(Key_Comma)
 #define ANGLE_R LSHIFT(Key_Period)
 #define BRACKET_L Key_LeftBracket
-#define BRACKET_R Key_RightParen
+#define BRACKET_R Key_RightBracket
 #define PAREN_L Key_LeftParen
 #define PAREN_R Key_RightParen
 #define CURLY_L Key_LeftCurlyBracket
