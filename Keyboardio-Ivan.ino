@@ -111,13 +111,12 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_PageDown,  Key_Z, Key_X,  Key_C, Key_V, Key_B,   XXX,
    Key_Backspace, Key_LeftShift, Key_LeftAlt,  Key_LeftGui,
    Key_LeftControl,
-
-   Key_PrintScreen,   Key_6, Key_7, Key_8,     Key_9,      Key_0,         Consumer_Mute,
-   Key_Enter,         Key_J, Key_L, Key_U,     Key_Y,      Key_Semicolon, Key_Equals,
-                      Key_H, Key_N, Key_E,     Key_I,      Key_O,         Key_Quote,
-   Key_PcApplication, Key_K, Key_M, Key_Comma, Key_Period, Key_Slash,     XXX,
-   MT(RightAlt, Escape), ShiftToLayer(LAZYNUMBERS), Key_Spacebar, ShiftToLayer(PROGRAMMING),
-   ShiftToLayer(FUNCTION)),
+                       Key_PrintScreen,   Key_6, Key_7, Key_8,     Key_9,      Key_0,         Consumer_Mute,
+                       Key_Enter,         Key_J, Key_L, Key_U,     Key_Y,      Key_Semicolon, Key_Equals,
+                                          Key_H, Key_N, Key_E,     Key_I,      Key_O,         Key_Quote,
+                       Key_PcApplication, Key_K, Key_M, Key_Comma, Key_Period, Key_Slash,     XXX,
+                       MT(RightAlt, Escape), ShiftToLayer(LAZYNUMBERS), Key_Spacebar, ShiftToLayer(PROGRAMMING),
+                       ShiftToLayer(FUNCTION)),
 
 
   [LAZYNUMBERS] = KEYMAP_STACKED
@@ -127,13 +126,12 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___, XXX,           XXX,           XXX,           XXX,           XXX,             XXX,
    ___, ___, ___, ___,
    ___,
-
-   XXX, XXX,           XXX,           XXX,           XXX,                XXX,        XXX,
-   ___, LSHIFT(Key_6), LSHIFT(Key_7), LSHIFT(Key_8), LSHIFT(Key_Equals), Key_Equals, XXX,
-        Key_6,         Key_7,         Key_8,         Key_9,              Key_0,      XXX,
-   XXX, XXX,           XXX,           XXX,           XXX,                XXX,        XXX,
-   ___, ___, ___, ___,
-   ___),
+                       XXX, XXX,           XXX,           XXX,           XXX,                XXX,        XXX,
+                       ___, LSHIFT(Key_6), LSHIFT(Key_7), LSHIFT(Key_8), LSHIFT(Key_Equals), Key_Equals, XXX,
+                            Key_6,         Key_7,         Key_8,         Key_9,              Key_0,      XXX,
+                       XXX, XXX,           XXX,           XXX,           XXX,                XXX,        XXX,
+                       ___, ___, ___, ___,
+                       ___),
 
 
   [PROGRAMMING] =  KEYMAP_STACKED
@@ -143,13 +141,12 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    XXX, XXX,     XXX,       XXX,     XXX,     XXX,      XXX,
    XXX, ___, ___, ___,
    ___,
-
-   XXX,            Key_F6,        Key_F7,  Key_F8,     Key_F9,    Key_F10, Key_F11,
-   Key_ScrollLock, XXX,           XXX,     UNDERSCORE, Key_Minus, PIPE,    ___,
-                   Key_Backslash, PAREN_R, CURLY_R,    BRACKET_R, ANGLE_R, ___,
-   Key_Pause,      XXX,           XXX,     XXX,        XXX,       XXX,     XXX,
-   ___, ___, ___, ___,
-   ___),
+                       XXX,            Key_F6,        Key_F7,  Key_F8,     Key_F9,    Key_F10, Key_F11,
+                       Key_ScrollLock, XXX,           XXX,     UNDERSCORE, Key_Minus, PIPE,    ___,
+                                       Key_Backslash, PAREN_R, CURLY_R,    BRACKET_R, ANGLE_R, ___,
+                       Key_Pause,      XXX,           XXX,     XXX,        XXX,       XXX,     XXX,
+                       ___, ___, ___, ___,
+                       ___),
 
 
   [FUNCTION] =  KEYMAP_STACKED
@@ -159,13 +156,12 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_End,  XXX,         XXX,       XXX,         XXX,        XXX,          XXX,
    Key_Delete, ___, ___, ___,
    ___,
-
-   LALT(Key_PrintScreen), Key_F6,       Key_F7,        Key_F8,        Key_F9,         Key_F10, Key_F11,
-   Key_ScrollLock,        Key_PageUp,   Key_Home,      Key_UpArrow,   Key_End,        XXX,     Key_F12,
-                          Key_PageDown, Key_LeftArrow, Key_DownArrow, Key_RightArrow, XXX,     XXX,
-   Key_Pause,             XXX,          XXX,           XXX,           XXX,            XXX,     Key_Mute,
-   ___, ___, Key_Enter, ___,
-   ___)
+                       LALT(Key_PrintScreen), Key_F6,       Key_F7,        Key_F8,        Key_F9,         Key_F10, Key_F11,
+                       Key_ScrollLock,        Key_PageUp,   Key_Home,      Key_UpArrow,   Key_End,        XXX,     Key_F12,
+                                              Key_PageDown, Key_LeftArrow, Key_DownArrow, Key_RightArrow, XXX,     XXX,
+                       Key_Pause,             XXX,          XXX,           XXX,           XXX,            XXX,     Key_Mute,
+                       ___, ___, Key_Enter, ___,
+                       ___)
 };
 
 /* Re-enable astyle's indent enforcement */
