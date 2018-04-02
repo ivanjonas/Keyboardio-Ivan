@@ -19,7 +19,7 @@
 #include "Kaleidoscope-LEDEffect-Rainbow.h"
 #include "Kaleidoscope-LED-Stalker.h"
 #include "Kaleidoscope-DualUse.h"
-#include "src/LangPack-German/LangPack-German.h"
+#include "src/Kaleidoscope-LangPack-German.h"
 
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
