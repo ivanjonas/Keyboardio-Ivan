@@ -82,7 +82,7 @@ enum { COLEMAK, LAZYNUMBERS, PROGRAMMING, FUNCTION }; // layers
 
 /** Convenience definitions.
  */
-#define R(n) (Key){.raw = kaleidoscope::language::n}
+#define LANG(n) (Key){.raw = kaleidoscope::language::n}
 
 #define ANGLE_L LSHIFT(Key_Comma)
 #define ANGLE_R LSHIFT(Key_Period)
@@ -150,10 +150,10 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,      Key_F1,      Key_F2,    Key_F3,      Key_F4,     Key_F5,       Key_Insert,
-   Key_Tab,  VOLUME_DOWN, VOLUME_UP, TRACK_PREV,  TRACK_NEXT, PLAY_PAUSE,   ___,
-   Key_Home, R(DEU_AU),   R(DEU_OU), R(DEU_SSCH), R(DEU_UU),  XXX,
-   Key_End,  XXX,         XXX,       XXX,         XXX,        XXX,          XXX,
+  (___,      Key_F1,       Key_F2,       Key_F3,         Key_F4,       Key_F5,       Key_Insert,
+   Key_Tab,  VOLUME_DOWN,  VOLUME_UP,    TRACK_PREV,     TRACK_NEXT,   PLAY_PAUSE,   ___,
+   Key_Home, LANG(DEU_AU), LANG(DEU_OU), LANG(DEU_SSCH), LANG(DEU_UU), XXX,
+   Key_End,  XXX,          XXX,          XXX,            XXX,          XXX,          XXX,
    Key_Delete, ___, ___, ___,
    ___,
                        LALT(Key_PrintScreen), Key_F6,       Key_F7,        Key_F8,        Key_F9,         Key_F10, Key_F11,
