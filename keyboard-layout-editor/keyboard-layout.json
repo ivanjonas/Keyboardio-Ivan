@@ -3,7 +3,7 @@
     "backcolor": "#ffffff",
     "name": "Keyboardio Model 01 - Ivan's layout",
     "author": "Ivan Jonas Gomes",
-    "notes": "Colemak base for typing, drawing great inspiration from the Crackle layout to avoid using the number row. A custom plugin based on Algernon's Hungarian LangPack is used to produce the German characters. A custom Programming layer gives more convenient and logical access to braces of most kinds.\n\nThere are some downsides to this layout. For one, I really don't like using FN and a key on the same side due to my hand size. There is an arbitrary separation of += into the \"Num\" layer and -_ into the \"Prog\" layer. There's no convenient way to press Shift + Meta (If Shift+Alt proves to be less frequent, I could switch Alt and Meta). Inherent to any Keyboardio firmware is the dependence on the OS-side layout: for me, my custom layout does not have fully-featured AltGr functionality. If a significantly greater number of language-specific characters are desired, the Function layer may not be sufficient and a new layer or other strategy is required.\n\nIf you'd like to download, contribute or ask a question, the repo for this project is at https://github.com/ivanjonas/Keyboardio-Ivan. ",
+    "notes": "My Colemak-based Keyboardio Model 01 layout. Heavily inspired by the Crackle keyboard layout, a custom Programming layer gives more convenient and logical access to braces, symbols, and numbers, in an attempt to keep my fingers on the pink \"Primary alpha keys\" as much as possible. A plugin based on Algernon's Hungarian LangPack is used to produce the German characters. The AltGr/Esc key employes DualUse: Esc on tap, AltGr on hold. There's a dedicated top-layer F12 to open browser dev tools.\n\nThere are some downsides to this layout. For one, I really don't like using `FN` and a key on the same side due to my hand size. There's no convenient way to press `Shift+Meta` (if `Shift+Alt` proves to be less frequent, `Alt` and `Meta` can be switched). Numbers on the programming layer are somewhat annoying to type alongside commas and periods on the default layer. Inherent to any Keyboardio firmware is the dependence on the OS-side layout, so my German language-specific characters may or may not work on different computers.\n\nIf you'd like to download, contribute or ask a question, the repo for this project is at https://github.com/ivanjonas/Keyboardio-Ivan.",
     "switchMount": "alps",
     "switchBrand": "matias",
     "switchType": "PG155B01",
@@ -13,7 +13,7 @@
   [
     {
       "x": 3,
-      "t": "#000000\n\n\n\n#d62929",
+      "t": "#8f8f8f\n\n\n\n#b81b24",
       "a": 5,
       "f": 4,
       "fa": [
@@ -22,58 +22,53 @@
     },
     "#\n3\n\n\nF3",
     {
-      "x": 9.25
+      "x": 7.25
     },
     "*\n8\n\n\nF8"
   ],
   [
     {
       "y": -0.875,
-      "x": 2,
-      "t": "#0d0d0b\n\n\n\n#d62929"
+      "x": 2
     },
     "@\n2\n\n\nF2",
     {
-      "x": 1,
-      "t": "#000000\n\n\n\n#d62929"
+      "x": 1
     },
-    "$\n4\n\n\nF4"
-  ],
-  [
+    "$\n4\n\n\nF4",
     {
-      "y": -0.995,
-      "x": 12.25
+      "x": 5.25
     },
     "&\n7\n\n\nF7",
     {
-      "x": 1,
-      "t": "#0d0d0b\n\n\n\n#d62929"
+      "x": 1
     },
     "(\n9\n\n\nF9"
   ],
   [
     {
-      "y": -0.8799999999999999,
-      "x": 5,
-      "t": "#000000\n\n\n\n#d62929"
+      "y": -0.875,
+      "x": 5
     },
     "%\n5\n\n\nF5",
     {
+      "t": "#000000\n\n\n\n#b81b24",
       "a": 7,
       "f": 3,
       "h": 1.5
     },
     "LED\n\n\n\nInsert",
     {
-      "x": 3.25,
+      "x": 1.25,
       "f": 6,
       "fa": [
         3
       ],
       "h": 1.5
     },
-    "PrtSc\n\n\n\nAlt + Prt",
+    "PrtSc\n\n\n\nPrtSc",
     {
+      "t": "#8f8f8f\n\n\n\n#b81b24",
       "a": 5,
       "f": 4,
       "fa": [
@@ -87,113 +82,108 @@
       "y": -0.875,
       "c": "#ffffff",
       "t": "#000000",
+      "g": true,
       "a": 7,
       "f": 3
     },
     "",
     {
       "c": "#cccccc",
-      "t": "#0d0d0b\n\n\n\n#d62929",
+      "t": "#8f8f8f\n\n\n\n#b81b24",
+      "g": false,
       "a": 5,
       "f": 4,
       "fa": [
         2
       ]
     },
-    "!\n1\n\n\nF1"
-  ],
-  [
+    "!\n1\n\n\nF1",
     {
-      "y": -0.995,
-      "x": 15.25
+      "x": 11.25
     },
     ")\n0\n\n\nF10",
     {
-      "t": "#000000\n\n\n\n#d62929",
+      "t": "#000000\n\n\n\n#b81b24",
       "a": 7,
-      "f": 9,
-      "fa": [
-        5
-      ]
+      "f": 4
     },
-    "<i class='kb kb-Multimedia-Mute-2'></i>\n\n\n\nF11"
+    "F12\n\n\n\nF11"
   ],
   [
     {
-      "y": -0.3799999999999999,
+      "y": -0.375,
       "x": 3,
       "c": "#edb7cb",
-      "t": "#000000\n#23a102\n\n\n#b81b24",
+      "t": "#23a102\n#23a102\n\n\n#b81b24\n\n\n\n\n#000000",
       "a": 4,
-      "f": 3,
       "fa": [
-        5,
-        2
+        3,
+        3
       ]
     },
-    "\n#\n\n\n<i class='kb kb-Multimedia-Rewind-Start'></i>\n\n\n\n\nF",
+    "#\n3\n\n\n<i class='kb kb-Multimedia-Rewind-Start'></i>\n\n\n\n\nF",
     {
-      "x": 9.25,
-      "t": "#000000\n#23a102\n\n#9331d4\n#b81b24",
+      "x": 7.25,
       "fa": [
         5,
-        4,
+        3,
         0,
-        5
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        3
       ]
     },
-    "\n*\n\n-\n<i class='fa fa-arrow-up'></i>\n\n\n\n\nU"
+    "*\n8\n\n\n<i class='fa fa-arrow-up'></i>\n\n\n\n\nU"
   ],
   [
     {
       "y": -0.875,
       "x": 2,
-      "t": "#0d0d0b\n#23a102\n\n\n#b81b24",
       "fa": [
-        5,
-        1
+        2,
+        3
       ]
     },
-    "\n@\n\n\n<i class='kb kb-Multimedia-Volume-Up-1'></i>\n\n\n\n\nW",
+    "@\n2\n\n\n<i class='kb kb-Multimedia-Volume-Up-1'></i>\n\n\n\n\nW",
     {
       "x": 1,
-      "t": "#000000\n#23a102\n\n\n#b81b24",
       "fa": [
-        5,
-        2
+        3,
+        3
       ]
     },
-    "\n$\n\n\n<i class='kb kb-Multimedia-FastForward-End'></i>\n\n\n\n\nP"
-  ],
-  [
-    {
-      "y": -0.9950000000000001,
-      "x": 12.25
-    },
-    "\n&\n\n\nHome\n\n\n\n\nL",
-    {
-      "x": 1,
-      "t": "#0d0d0b\n#23a102\n\n#9331d4\n#b81b24",
-      "fa": [
-        5,
-        0,
-        0,
-        5
-      ]
-    },
-    "\n+\n\n_\nEnd\n\n\n\n\nY"
-  ],
-  [
-    {
-      "y": -0.8799999999999999,
-      "x": 5,
-      "t": "#000000\n#23a102\n\n\n#b81b24"
-    },
-    "\n%\n\n\n<i class='fa fa-play'></i> / <i class='fa fa-pause'></i>\n\n\n\n\nG",
+    "$\n4\n\n\n<i class='kb kb-Multimedia-FastForward-End'></i>\n\n\n\n\nP",
     {
       "x": 5.25
     },
-    "\n^\n\n\nPgUp\n\n\n\n\nJ"
+    "&\n7\n\n\nHome\n\n\n\n\nL",
+    {
+      "x": 1
+    },
+    "(\n9\n\n\nEnd\n\n\n\n\nY"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 5,
+      "fa": [
+        2,
+        3
+      ]
+    },
+    "%\n5\n\n\n<i class='fa fa-play'></i> / <i class='fa fa-pause'></i>\n\n\n\n\nG",
+    {
+      "x": 3.25,
+      "fa": [
+        3,
+        3
+      ]
+    },
+    "^\n6\n\n\nPgUp\n\n\n\n\nJ"
   ],
   [
     {
@@ -201,54 +191,39 @@
       "c": "#cccccc",
       "t": "#0d0d0b",
       "a": 5,
-      "f": 4
+      "fa": [
+        5,
+        7
+      ]
     },
     "~\n`",
     {
       "c": "#edb7cb",
-      "t": "#0d0d0b\n#23a102\n\n\n#b81b24",
+      "t": "#23a102\n#23a102\n\n\n#b81b24\n\n\n\n\n#000000",
       "a": 4,
-      "f": 3,
-      "fa": [
-        0,
-        2,
-        0,
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        2
-      ]
+      "f": 4
     },
-    "\n!\n\n\n<i class='kb kb-Multimedia-Volume-Down-1'></i>\n\n\n\n\nQ"
-  ],
-  [
+    "!\n1\n\n\n<i class='kb kb-Multimedia-Volume-Down-1'></i>\n\n\n\n\nQ",
     {
-      "y": -0.9950000000000001,
-      "x": 15.25,
-      "t": "#0d0d0b\n#23a102\n\n#9331d4",
-      "f": 4,
+      "x": 11.25,
+      "t": "#23a102\n#23a102\n\n\n#b81b24\n\n\n\n#000000\n\n#000000",
       "fa": [
-        0,
         3,
-        0,
         3
       ]
     },
-    "\n=\n\n|\n\n\n\n\n:\n\n;",
+    ")\n0\n\n\n\n\n\n\n:\n\n;",
     {
       "c": "#cccccc",
-      "t": "#0d0d0b\n\n\n\n#d62929",
+      "t": "#0d0d0b",
       "a": 5,
       "f": 4
     },
-    "+\n=\n\n\nF12"
+    "_\n-"
   ],
   [
     {
-      "y": -0.6299999999999999,
+      "y": -0.625,
       "x": 6,
       "t": "#000000",
       "a": 7,
@@ -257,100 +232,88 @@
     },
     "Tab",
     {
-      "x": 3.25,
-      "t": "#000000\n\n\n\n#d62929",
+      "x": 1.25,
+      "t": "#000000\n\n\n\n#b81b24",
       "f": 7,
       "h": 1.5
     },
-    "<i class='kb kb-Return-2'></i>\n\n\n\nScrLk"
+    "\n\n\n\nScrLk"
   ],
   [
     {
       "y": -0.75,
       "x": 3,
       "c": "#edb7cb",
-      "t": "#000000\n#23a102\n\n#9331d4\n#b81b24",
+      "t": "#000000\n#23a102\n\n\n#b81b24\n\n\n\n\n#000000",
       "a": 4,
-      "f": 3,
-      "f2": 2
+      "f": 4,
+      "fa": [
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        3
+      ]
     },
-    "\n3\n\n(\nß\n\n\n\n\nS",
+    "\n(\n\n\nß\n\n\n\n\nS",
     {
-      "x": 9.25,
-      "f2": 2
+      "x": 7.25
     },
-    "\n8\n\n)\n<i class='fa fa-arrow-down'></i>\n\n\n\n\nE"
+    "\n)\n\n\n<i class='fa fa-arrow-down'></i>\n\n\n\n\nE"
   ],
   [
     {
       "y": -0.875,
-      "x": 2,
-      "t": "#0d0d0b\n#23a102\n\n#9331d4\n#b81b24",
-      "f2": 2
+      "x": 2
     },
-    "\n2\n\n[\nö\n\n\n\n\nR",
+    "\n[\n\n\nö\n\n\n\n\nR",
     {
-      "x": 1,
-      "t": "#000000\n#23a102\n\n#9331d4\n#b81b24",
-      "f2": 2
+      "x": 1
     },
-    "\n4\n\n{\nü\n\n\n\n\nT"
+    "\n{\n\n\nü\n\n\n\n\nT",
+    {
+      "x": 5.25
+    },
+    "\n}\n\n\n<i class='fa fa-arrow-left'></i>\n\n\n\n\nN",
+    {
+      "x": 1
+    },
+    "\n]\n\n\n<i class='fa fa-arrow-right'></i>\n\n\n\n\nI"
   ],
   [
     {
-      "y": -0.9950000000000001,
-      "x": 12.25,
-      "f2": 2
+      "y": -0.875,
+      "x": 5
     },
-    "\n7\n\n}\n<i class='fa fa-arrow-left'></i>\n\n\n\n\nN",
+    "\n/\n\n\n\n\n\n\n\nD",
     {
-      "x": 1,
-      "t": "#0d0d0b\n#23a102\n\n#9331d4\n#b81b24",
-      "f2": 2
+      "x": 3.25
     },
-    "\n9\n\n]\n<i class='fa fa-arrow-right'></i>\n\n\n\n\nI"
-  ],
-  [
-    {
-      "y": -0.8799999999999999,
-      "x": 5,
-      "t": "#000000\n#23a102\n\n#9331d4",
-      "f2": 2
-    },
-    "\n5\n\n/\n\n\n\n\n\nD",
-    {
-      "x": 5.25,
-      "t": "#000000\n#23a102\n\n#9331d4\n#b81b24",
-      "f2": 2
-    },
-    "\n6\n\n\\\nPgDn\n\n\n\n\nH"
+    "\n\\\n\n\nPgDn\n\n\n\n\nH"
   ],
   [
     {
       "y": -0.875,
       "c": "#cccccc",
       "t": "#0d0d0b",
-      "a": 7,
-      "f": 4
+      "a": 7
     },
     "PgUp",
     {
       "c": "#edb7cb",
-      "t": "#0d0d0b\n#23a102\n\n#9331d4\n#b81b24",
-      "a": 4,
-      "f": 3,
-      "f2": 2
+      "t": "#000000\n#23a102\n\n\n#b81b24\n\n\n\n\n#000000",
+      "a": 4
     },
-    "\n1\n\n<\nä\n\n\n\n\nA"
-  ],
-  [
+    "\n<\n\n\nä\n\n\n\n\nA",
     {
-      "y": -0.9950000000000001,
-      "x": 15.25,
-      "t": "#0d0d0b\n#23a102\n\n#9331d4",
-      "f2": 2
+      "x": 11.25
     },
-    "\n0\n\n>\n\n\n\n\n\nO",
+    "\n>\n\n\n\n\n\n\n\nO",
     {
       "c": "#cccccc",
       "t": "#0d0d0b",
@@ -361,117 +324,297 @@
   ],
   [
     {
-      "y": -0.3799999999999999,
+      "y": -0.375,
       "x": 3,
       "c": "#edb7cb",
-      "t": "#000000",
-      "a": 7,
-      "f": 3
+      "t": "#000000\n\n\n\n#b81b24",
+      "a": 7
     },
     "C",
     {
-      "x": 9.25,
-      "a": 5
+      "x": 7.25,
+      "t": "#000000\n#23a102\n\n\n#b81b24\n\n\n\n#000000\n#000000",
+      "a": 4,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        3,
+        6
+      ]
     },
-    "<\n,"
+    "\n-\n\n\n\n\n\n\n<\n,"
   ],
   [
     {
       "y": -0.875,
       "x": 2,
-      "t": "#0d0d0b",
+      "t": "#000000\n\n\n\n#b81b24",
       "a": 7
     },
     "X",
     {
-      "x": 1,
-      "t": "#000000"
+      "x": 1
     },
-    "V"
+    "V",
+    {
+      "x": 5.25,
+      "t": "#000000\n#23a102\n\n\n#b81b24\n\n\n\n\n#000000",
+      "a": 4,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        3,
+        3
+      ]
+    },
+    "\n_\n\n\n\n\n\n\n\nM",
+    {
+      "x": 1,
+      "t": "#000000\n#23a102\n\n\n#b81b24\n\n\n\n#000000\n#000000",
+      "fa": [
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        3,
+        6
+      ]
+    },
+    "\n+\n\n\n\n\n\n\n>\n."
   ],
   [
     {
-      "y": -0.9950000000000001,
-      "x": 12.25
-    },
-    "M",
-    {
-      "x": 1,
-      "t": "#0d0d0b",
-      "a": 5
-    },
-    ">\n."
-  ],
-  [
-    {
-      "y": -0.8799999999999999,
+      "y": -0.875,
       "x": 5,
-      "t": "#000000",
+      "t": "#000000\n\n\n\n#b81b24",
       "a": 7
     },
     "B",
     {
-      "c": "#ffffff"
+      "c": "#ffffff",
+      "t": "#000000",
+      "g": true,
+      "f": 3
     },
     "",
     {
-      "x": 3.25,
+      "x": 1.25,
       "c": "#cccccc",
-      "t": "#000000\n\n\n\n#d62929"
+      "t": "#000000\n\n\n\n#b81b24",
+      "g": false
     },
     "Menu\n\n\n\nPause",
     {
       "c": "#edb7cb",
-      "t": "#000000"
+      "t": "#000000\n#23a102\n\n\n#b81b24\n\n\n\n\n#000000",
+      "a": 4,
+      "f": 4,
+      "fa": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ]
     },
-    "K"
+    "\n|\n\n\n\n\n\n\n\nK"
   ],
   [
     {
       "y": -0.875,
       "c": "#cccccc",
-      "f": 4
+      "t": "#000000",
+      "a": 7
     },
     "PgUp",
     {
       "c": "#edb7cb",
-      "t": "#0d0d0b",
-      "f": 3
+      "t": "#000000\n\n\n\n#b81b24"
     },
-    "Z"
+    "Z",
+    {
+      "x": 11.25,
+      "t": "#000000\n#23a102\n\n\n#b81b24\n\n\n\n#000000\n#000000",
+      "a": 4,
+      "fa": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ]
+    },
+    "\n=\n\n\n\n\n\n\n?\n/",
+    {
+      "c": "#cccccc",
+      "t": "#000000",
+      "a": 7,
+      "f": 3,
+      "fa": [
+        5
+      ]
+    },
+    "<i class='kb kb-Multimedia-Mute-2'></i>"
   ],
   [
     {
-      "y": -0.9950000000000001,
-      "x": 15.25,
-      "a": 5
+      "y": 1.125,
+      "f": 3,
+      "h": 0.5
     },
-    "?\n/",
+    "A",
     {
-      "c": "#ffffff",
-      "t": "#000000",
-      "a": 7
+      "c": "#ffd985",
+      "a": 4,
+      "f": 3,
+      "w": 2,
+      "h": 0.5,
+      "d": true
+    },
+    "Normal key",
+    {
+      "x": 9,
+      "w": 2.25,
+      "h": 0.5,
+      "d": true
+    },
+    "\n\nNormal modifier",
+    {
+      "a": 7,
+      "h": 0.5
     },
     ""
   ],
   [
     {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#8f8f8f",
+      "f": 3,
+      "h": 0.5
+    },
+    "1",
+    {
+      "c": "#ffd985",
+      "t": "#000000",
+      "a": 4,
+      "f": 3,
+      "w": 2,
+      "h": 0.5,
+      "d": true
+    },
+    "Vestigial key",
+    {
+      "x": 9,
+      "w": 2.25,
+      "h": 0.5,
+      "d": true
+    },
+    "\n\nPrimary alpha key",
+    {
+      "c": "#edb7cb",
+      "a": 7,
+      "h": 0.5
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#ffffff",
+      "g": true,
+      "h": 0.5
+    },
+    "",
+    {
+      "c": "#ffd985",
+      "g": false,
+      "a": 4,
+      "f": 3,
+      "w": 2,
+      "h": 0.5,
+      "d": true
+    },
+    "Unused key",
+    {
+      "x": 9,
+      "w": 2.25,
+      "h": 0.5,
+      "d": true
+    },
+    "\n\nCustom layers",
+    {
+      "c": "#23a102",
+      "a": 7,
+      "w": 0.5,
+      "h": 0.5
+    },
+    "",
+    {
+      "c": "#c2444c",
+      "w": 0.5,
+      "h": 0.5
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.75,
+      "x": 7.75,
+      "c": "#ffd985",
+      "a": 5,
+      "f": 3,
+      "w": 2,
+      "h": 0.8,
+      "d": true
+    },
+    "Tap for ESC,\nhold for AltGr"
+  ],
+  [
+    {
       "r": 15,
-      "rx": 6.5,
+      "rx": 5.5,
       "ry": 4.25,
       "y": 0.5,
       "x": -2.25,
-      "c": "#ffd985",
+      "c": "#cccccc",
       "t": "#000000\n\n\n\n#b81b24",
+      "a": 7,
       "f": 4
     },
-    "<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>&nbsp;\n\n\n\n<i class='kb kb-Unicode-DeleteRight-Big'></i>"
+    "<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>&nbsp\n\n\n\n<i class='kb kb-Unicode-DeleteRight-Big'></i>"
   ],
   [
     {
       "r": 20,
       "y": -0.9000000000000004,
       "x": -1.0999999999999996,
+      "c": "#ffd985",
       "t": "#000000",
       "fa": [
         3
@@ -521,29 +664,27 @@
       "r": -25,
       "y": -1.2299999999999995,
       "x": 2.8000000000000007,
-      "c": "#43d161",
+      "c": "#23a102",
       "a": 7,
       "f": 4
     },
-    "Num"
+    "Prog"
   ],
   [
     {
       "r": -20,
       "y": -1.3400000000000007,
       "x": 4.1,
-      "c": "#ffd985",
-      "t": "#000000\n\n\n\n#d62929",
+      "c": "#cccccc",
       "f": 4
     },
-    "SPC\n\n\n\n<i class='kb kb-Return-2'></i>"
+    "SPC"
   ],
   [
     {
       "y": 0.6400000000000006,
       "x": 3.5,
       "c": "#c2444c",
-      "t": "#000000",
       "f": 4,
       "w": 1.25,
       "h": 1.25
@@ -553,11 +694,13 @@
   [
     {
       "r": -15,
-      "y": -3.079999999999999,
+      "y": -3.0999999999999996,
       "x": 5.35,
-      "c": "#9c52eb",
-      "f": 4
+      "c": "#cccccc",
+      "fa": [
+        6
+      ]
     },
-    "Prog"
+    "<i class='kb kb-Return-2'></i>"
   ]
 ]
