@@ -57,7 +57,7 @@ enum { COLEMAK, PROGRAMMING, FUNCTION }; // layers
 #define CURLY_L Key_LeftCurlyBracket
 #define CURLY_R Key_RightCurlyBracket
 #define PIPE LSHIFT(Key_Backslash)
-#define UNDERSC LSHIFT(Key_Minus)
+#define COLON LSHIFT(Key_Semicolon)
 #define MINUS   Key_Minus
 #define EQUALS  Key_Equals
 #define PLUS    LSHIFT(Key_Equals)
@@ -87,16 +87,16 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
 
   [PROGRAMMING] =  KEYMAP_STACKED
-  (XXX, XXX,     XXX,     XXX,     XXX,     XXX,   XXX,
-   XXX, Key_1,   Key_2,   Key_3,   Key_4,   Key_5, XXX,
-   XXX, ANGLE_L, BRCKT_L, PAREN_L, CURLY_L, Key_Slash,
-   XXX, XXX,     XXX,     XXX,     XXX,     XXX,   XXX,
+  (XXX, XXX,     XXX,       XXX,     XXX,     XXX,   XXX,
+   XXX, ANGLE_L, BRCKT_L,   PAREN_L, CURLY_L, Key_Slash, XXX,
+   XXX, Key_1,   Key_2,     Key_3,   Key_4,   Key_5,
+   XXX, XXX,     Key_Comma, XXX,     COLON,   XXX,   XXX,
    ___, ___, ___, ___,
    ___,
-                       XXX, XXX,           XXX,     XXX,     XXX,     XXX,     XXX,
-                       XXX, Key_6,         Key_7,   Key_8,   Key_9,   Key_0,   XXX,
-                            Key_Backslash, CURLY_R, PAREN_R, BRCKT_R, ANGLE_R, XXX,
-                       XXX, PIPE,          UNDERSC, MINUS,   PLUS,    EQUALS,  XXX,
+                       XXX, XXX,           XXX,        XXX,     XXX,     XXX,     XXX,
+                       XXX, Key_Backslash, CURLY_R,    PAREN_R, BRCKT_R, ANGLE_R, XXX,
+                            Key_6,         Key_7,      Key_8,   Key_9,   Key_0,   Key_Backtick,
+                       XXX, PIPE,          Key_Period, MINUS,   PLUS,    EQUALS,  XXX,
                        ___, ___, ___, ___,
                        ___),
 
